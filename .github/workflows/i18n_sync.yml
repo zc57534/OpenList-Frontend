@@ -46,11 +46,13 @@ jobs:
         id: verify-changed-files
         run: |
           cp -f ./backend/lang/*.json ./src/lang/en/ 2>/dev/null || :
-          if [ -n "$(git status --porcelain)" ]; then
-            git add src/lang/en/*.json
-            echo "changed=true" >> $GITHUB_OUTPUT
-          else
+          if git diff --quiet HEAD -- src/lang/en/; then
+            echo "No changes detected in src/lang/en/"
             echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected in src/lang/en/"
+            git add src/lang/en/
+            echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Import GPG key
@@ -94,6 +96,7 @@ jobs:
           run_install: false
 
       - name: Install dependencies
+        if: steps.verify-changed-files.outputs.changed == 'true'
         run: pnpm install
 
       - name: Sync to Crowdin
