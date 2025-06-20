@@ -1,6 +1,7 @@
 import { objStore, selectedObjs, State, me } from "~/store"
 import { Obj } from "~/types"
 import { api, encodePath, pathDir, pathJoin, standardizePath } from "~/utils"
+import { copySharePublicUrl } from "./shareLink"
 import { useRouter, useUtil } from "."
 
 type URLType = "preview" | "direct" | "proxy"
@@ -89,6 +90,14 @@ export const useCopyLink = () => {
     },
     copyCurrentRawLink: (encodeAll?: boolean) => {
       copy(currentObjLink(encodeAll))
+    },
+    copyFileDownloadUrl: (raw_link: string) => {
+      copy(raw_link)
+    },
+    copySharePublicUrl: (raw_link: string) => {
+      // 显示第一个弹窗（设置分享链接）
+      copySharePublicUrl(raw_link)
+      // copy(currentObjLink(encodeAll))
     },
   }
 }

@@ -19,7 +19,8 @@ import QRCode from "qrcode"
 
 export const Download = (props: { openWith?: boolean }) => {
   const t = useT()
-  const { copyCurrentRawLink } = useCopyLink()
+  const { copyCurrentRawLink, copySharePublicUrl, copyFileDownloadUrl } =
+    useCopyLink()
   const [qrUrl, setQrUrl] = createSignal("")
   QRCode.toDataURL(objStore.raw_url, {
     type: "image/jpeg",
@@ -32,6 +33,18 @@ export const Download = (props: { openWith?: boolean }) => {
       <HStack spacing="$2">
         <Button colorScheme="accent" onClick={() => copyCurrentRawLink(true)}>
           {t("home.toolbar.copy_link")}
+        </Button>
+        <Button
+          colorScheme="accent"
+          onClick={() => copySharePublicUrl(objStore.raw_url)}
+        >
+          {t("home.toolbar.share_url")}
+        </Button>
+        <Button
+          colorScheme="accent"
+          onClick={() => copyFileDownloadUrl(objStore.raw_url)}
+        >
+          {t("home.toolbar.file_link")}
         </Button>
         <Button as="a" href={objStore.raw_url} target="_blank">
           {t("home.preview.download")}
