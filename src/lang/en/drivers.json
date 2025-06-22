@@ -748,6 +748,15 @@
     "refresh_token": "Refresh token",
     "root_folder_id": "Root folder id"
   },
+  "Quqi": {
+    "cdn": "Cdn",
+    "cdn-tips": "If you enable this option, the download speed can be increased, but there will be some performance loss",
+    "cookie": "Cookie",
+    "cookie-tips": "Cookie can be used on multiple clients at the same time",
+    "password": "Password",
+    "phone": "Phone",
+    "root_folder_id": "Root folder id"
+  },
   "S3": {
     "access_key_id": "Access key id",
     "add_filename_to_disposition": "Add filename to disposition",
@@ -1155,7 +1164,7 @@
     "PikPakShare": {},
     "Quark": {},
     "QuarkTV": {},
-
+    "Quqi": {},
     "S3": {},
     "SFTP": {},
     "SMB": {},
@@ -1234,6 +1243,7 @@
     "PikPakShare": "PikPakShare",
     "Quark": "Quark",
     "QuarkTV": "QuarkTV",
+    "Quqi": "Quqi",
     "S3": "S3",
     "SFTP": "SFTP",
     "SMB": "SMB",
