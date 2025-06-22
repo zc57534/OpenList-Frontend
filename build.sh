@@ -25,6 +25,7 @@ main() {
     set_defaults
     check_git_version_and_commit
     update_package_version
+    archive_name="openlist-frontend-dist-${version_tag}"
     build_project
     create_version_file
     handle_compression
@@ -187,13 +188,11 @@ handle_compression() {
         log_step "Creating compressed archive..."
         tar -czvf "${archive_name}.tar.gz" -C dist .
         tar -czvf "i18n.tar.gz" --exclude=en -C src/lang .
-        mv "${archive_name}.tar.gz" "i18n.tar.gz" dist/
+        mv "${archive_name}.tar.gz" dist/
+        mv "i18n.tar.gz" dist/
         log_success "Compressed archive created: dist/${archive_name}.tar.gz dist/i18n.tar.gz"
     fi
 }
-
-# Initialize variables
-archive_name="openlist-frontend-dist-${version_tag}"
 
 # Run the script
 main "$@"
