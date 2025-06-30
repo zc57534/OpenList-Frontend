@@ -747,6 +747,7 @@
   },
   "Quark": {
     "cookie": "Cookie",
+    "only_list_video_file": "Only list video file",
     "order_by": "Order by",
     "order_bys": {
       "file_name": "File name",
@@ -759,7 +760,9 @@
       "asc": "Asc",
       "desc": "Desc"
     },
-    "root_folder_id": "Root folder id"
+    "root_folder_id": "Root folder id",
+    "use_transcoding_address": "Use transcoding address",
+    "use_transcoding_address-tips": "You can watch the transcoded video and support 302 redirection"
   },
   "QuarkOpen": {
     "access_token": "Access token",
@@ -1039,6 +1042,7 @@
   },
   "UC": {
     "cookie": "Cookie",
+    "only_list_video_file": "Only list video file",
     "order_by": "Order by",
     "order_bys": {
       "file_name": "File name",
@@ -1051,7 +1055,9 @@
       "asc": "Asc",
       "desc": "Desc"
     },
-    "root_folder_id": "Root folder id"
+    "root_folder_id": "Root folder id",
+    "use_transcoding_address": "Use transcoding address",
+    "use_transcoding_address-tips": "You can watch the transcoded video and support 302 redirection"
   },
   "UCTV": {
     "device_id": "Device id",
