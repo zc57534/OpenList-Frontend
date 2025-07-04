@@ -850,8 +850,6 @@
     "filterFileTypes": "FilterFileTypes",
     "filterFileTypes-tips": "Supports suffix name of strm file",
     "paths": "Paths",
-    "signPath": "SignPath",
-    "signPath-tips": "sign the path in the strm file",
     "siteUrl": "SiteUrl",
     "siteUrl-tips": "The prefix URL of the strm file"
   },
