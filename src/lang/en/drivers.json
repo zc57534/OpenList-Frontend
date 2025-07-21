@@ -601,7 +601,8 @@
     "share_id": "Share id",
     "share_id-tips": "The part after the last / in the shared link",
     "share_pwd": "Share pwd",
-    "share_pwd-tips": "The password of the shared link"
+    "share_pwd-tips": "The password of the shared link",
+    "show_root_folder": "Show root folder"
   },
   "Local": {
     "mkdir_perm": "Mkdir perm",
